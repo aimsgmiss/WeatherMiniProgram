@@ -1,0 +1,95 @@
+@import "../common/common.wxss";
+
+.tit_seabox{
+  background: #fff;
+  height: 80rpx;
+  padding:10rpx 40rpx 10rpx 20rpx;
+  align-items: center;
+  display: flex;
+}
+.tit_seabox_bar{
+  width: calc(100%);
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  background: #F5F5F5;
+  padding-left: 20rpx;
+}
+/*有权限添加活动*/
+.tit_seabox_bar.tit_seabox_add{
+  width:calc( 100% - 20rpx );
+}
+/*开始搜索时*/
+.tit_seabox_bar.tit_start_search{
+  width: calc( 100% - 20rpx );
+}
+/*开始搜索且有权限添加*/
+.tit_seabox_bar.tit_start_search.tit_seabox_add{
+  width:calc( 100% - 20rpx );
+}
+.tit_seabox_bar icon{
+  margin-right: 20rpx;
+}
+.tit_seabox input{
+  height:70rpx;
+  line-height:60rpx;
+  font-size:28rpx;
+  width:100%;
+  margin-right:32rpx;
+}
+
+.tit_seabox_cancel_btn{
+  font-size: 28rpx;
+  width: 70rpx;
+  text-align: right;
+}
+
+.search_choose_category{
+  height: 320rpx;
+  padding: 10rpx 10rpx;
+  display: relative;
+}
+
+.search_choose_category.title {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  padding-left: 40%;
+}
+
+.search_choose_category.list {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  font-size: 28rpx;
+  align-items: center;
+}
+
+.search_choose_category.list_other_choose{
+  width: 100%;
+  height: 280rpx;
+  display: relative;
+  align-items: center;
+}
+
+.search_choose_category.list_other_choose.list1{
+  width: 100%;
+  height: 180rpx;
+  display: relative;
+  font-size: 28rpx;
+  align-items: center;
+
+}
+
+.search_choose_category.list.item{
+  width: 33%;
+}
+
+.search_choose_category.list.item.position{
+  width: 100%;
+  padding-left: 30%;
+  font-size: 36rpx;
+  color:rgb(110, 128, 145);
+}

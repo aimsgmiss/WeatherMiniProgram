@@ -1,0 +1,53 @@
+<!-- 搜索框开始 -->
+<view class='tit_seabox'>
+    <view class="tit_seabox_bar {{addflag?'tit_seabox_add':''}} {{searchflag?'tit_start_search':''}}">
+        <icon type='search' size="32rpx"></icon>
+        <input type="text"  bindconfirm="search" bindfocus='getfocus'  value='{{searchstr}}' auto-focus placeholder="{{placeholder}}"/>
+        <icon bindtap='clearSearchBar' wx:if="{{searchflag}}" type='clear' size="28rpx"></icon>
+    </view>
+    <view bindtap='cancelsearch' class="tit_seabox_cancel_btn">取消</view>
+</view>
+<view wx:if="{{currentSelectedCategory == '朋友圈'}}" class="search_choose_category list_other_choose">
+  <view class="search_choose_category list_other_choose list1">
+    <view>
+    <select id="select" options="{{options}}" key="cityId" text="cityName" bind:change="change"></select>
+    </view>
+    <view>开始时间</view>
+    <view>结束时间</view>
+  </view>
+</view>
+<view wx:if="{{currentSelectedCategory == '文章'}}">显示文章列表</view>
+<view wx:if="{{currentSelectedCategory == '公众号'}}">显示公众号</view>
+<view wx:if="{{currentSelectedCategory == '小程序'}}">显示小程序</view>
+<view wx:if="{{currentSelectedCategory == '音乐'}}">显示音乐</view>
+<view wx:if="{{currentSelectedCategory == '表情'}}">显示表情</view>
+<view class="search_choose_category" wx:if="{{currentSelectedCategory.length == 0}}">
+  <view class="search_choose_category title">搜索指定内容 </view>
+  <view wx:for="{{categoryList}}" wx:for-item="category" class="search_choose_category list">
+    <view wx:for="{{category}}" wx:for-item="item" class="search_choose_category list item">
+      <view class="search_choose_category list item position" id="{{item.name}}" bindtap="categoryClick">{{item.name}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- 搜索框结束 -->
+<view class="index">
+  <view class="index-bd">
+    <view class="kind-list">
+    <view wx:for="{{dataTableShow}}" wx:for-item="item" class="kind-list-item">
+        <view wx:if="{{item.name.length > 0}}" class="cell-bd">  单位: {{item.name}}</view>
+        <view wx:if="{{item.address.length > 0}}" class="cell-bd">  地址: {{item.address}}</view>
+        <view wx:if="{{item.linkname.length > 0}}" class="cell-bd">  联系人: {{item.linkname}}</view>
+        <view wx:if="{{item.telphone.length > 0}}" class="cell-bd">  电话: {{item.telphone}}</view>
+        <view wx:if="{{item.telphone.length > 0}}" class="cell-bd">  日期: {{item.date}}</view>
+      </view>
+    </view>
+    <view>
+      <button wx:if="{{dataTableShow.length > 0}}" class="mini-left-btn" type="primary" size="mini" bindtap="previousPage">上一页</button>
+      <button wx:if="{{dataTableShow.length > 0}}" class="mini-right-btn" type="primary" size="mini" bind:tap="nextPage">下一页</button>
+    </view>
+  </view>
+</view>
+
+
+

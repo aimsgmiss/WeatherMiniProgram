@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "select":"/pages/components/pages/area-selection/area-selection"
+  }
+}
