@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "area-selection":"/pages/components/pages/area-selection/area-selection",
+    "date-picker":"/pages/components/pages/date-picker/date-picker"
+  }
+}

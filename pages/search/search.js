@@ -47,38 +47,13 @@ Component({
         }
       ]
     ],
-    options: [
-      {
-        cityId: '001',
-        cityName: '东坡区'
-      }, 
-      {
-        cityId: '002',
-        cityName: '东坡区'
-      }, 
-      {
-        cityId: '003',
-        cityName: '仁寿县'
-      },
-      {
-        cityId: '004',
-        cityName: '洪雅县'
-      },
-      {
-        cityId: '005',
-        cityName: '丹棱县'
-      },
-      {
-        cityId: '006',
-        cityName: '青神县'
-      }
-  ],
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
+    
     // 取消
     clearData(){
       this.setData({
@@ -109,75 +84,76 @@ Component({
     nextPage(){
       console.log('next page click')
     },
-    search(){
+    searchData(){
+      console.log("searchData:..............")
       this.dataTableSource = [
         {
           name:"眉山市仁寿县",
           address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'马',
+          linkname:'于淑清',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"眉山市东坡区",
           address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'马',
+          linkname:'于淑清',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"眉山市清神县",
           address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'马',
+          linkname:'于淑清',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"眉山市东坡区2",
           address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'马',
+          linkname:'于淑清',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"成都市宣汉县",
           address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'马',
+          linkname:'于淑清',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"上海网络科技有限公司",
           address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'马',
+          linkname:'于淑清',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"宁波比孚",
           address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'马',
+          linkname:'马于淑清',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"上海网络科技有限公司2",
           address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'马',
+          linkname:'于淑清',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"上海网络科技有限公司3",
           address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'马',
+          linkname:'于淑清',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"波波维奇公司",
           address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'马',
+          linkname:'于淑清',
           telphone:'12300',
           date:'2020-6-20'
         },
@@ -186,6 +162,10 @@ Component({
     this.totalPageCount = this.dataTableSource.length / this.everyPageCount + 1
     this.currentPageIdx = 1
     this.setPageIndex(1)
+
+    var child = this.selectComponent('#searchFriendBtn')
+    console.log('child' + child)
+    var br = 0
   },
 
   setPageIndex(pageIdx){

@@ -15,7 +15,29 @@ Page({
       url: '../logs/logs'
     })
   },
+  getPhoneNumber (e) {
+    console.log(JSON.stringify(e))
+    console.log(e.detail.errMsg)
+    console.log(e.detail.iv)
+    console.log(e.detail.encryptedData)
+  },
+
   onLoad: function () {
+    wx.login({
+      success (res) {
+        console.log('res.code:'+res.code)
+        if (res.code) {
+          //发起网络请求
+          wx.request({
+            data: {
+              code: res.code
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

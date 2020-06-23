@@ -1,0 +1,25 @@
+/* pages/components/pages/date-picker/date-picker.wxss */
+@import "/pages/common/common.wxss";
+
+.date-picker{
+  height: auto;
+  font-size: 34rpx;
+}
+
+.date-picker-content{
+  padding: 0rpx 0rpx;
+  height: auto;
+}
+
+.date-picker-content-item{
+  margin: 10rpx 0rpx 10rpx 10rpx;
+  display: flex;
+}
+
+.date-picker-content-item.title{
+  width: 40%;
+}
+
+.date-picker-content-item.value{
+  width: 60%;
+}

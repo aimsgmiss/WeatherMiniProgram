@@ -1,13 +1,13 @@
 @import "../common/common.wxss";
 
-.tit_seabox{
+.tit-seabox{
   background: #fff;
   height: 80rpx;
   padding:10rpx 40rpx 10rpx 20rpx;
   align-items: center;
   display: flex;
 }
-.tit_seabox_bar{
+.tit-seabox-bar{
   width: calc(100%);
   height: 70rpx;
   display: flex;
@@ -16,21 +16,21 @@
   padding-left: 20rpx;
 }
 /*有权限添加活动*/
-.tit_seabox_bar.tit_seabox_add{
+.tit-seabox-bar.tit-seabox-add{
   width:calc( 100% - 20rpx );
 }
 /*开始搜索时*/
-.tit_seabox_bar.tit_start_search{
+.tit-seabox-bar.tit-start-search{
   width: calc( 100% - 20rpx );
 }
 /*开始搜索且有权限添加*/
-.tit_seabox_bar.tit_start_search.tit_seabox_add{
+.tit-seabox-bar.tit-start-search.tit-seabox-add{
   width:calc( 100% - 20rpx );
 }
-.tit_seabox_bar icon{
+.tit-seabox-bar icon{
   margin-right: 20rpx;
 }
-.tit_seabox input{
+.tit-seabox input{
   height:70rpx;
   line-height:60rpx;
   font-size:28rpx;
@@ -38,19 +38,19 @@
   margin-right:32rpx;
 }
 
-.tit_seabox_cancel_btn{
+.tit-seabox-cancel-btn{
   font-size: 28rpx;
   width: 70rpx;
   text-align: right;
 }
 
-.search_choose_category{
+.search-choose-category{
   height: 320rpx;
-  padding: 10rpx 10rpx;
+  padding: 10rpx 0rpx;
   display: relative;
 }
 
-.search_choose_category.title {
+.search-choose-category.title {
   width: 100%;
   height: 80rpx;
   display: flex;
@@ -59,7 +59,7 @@
   padding-left: 40%;
 }
 
-.search_choose_category.list {
+.search-choose-category.list {
   width: 100%;
   height: 80rpx;
   display: flex;
@@ -67,29 +67,51 @@
   align-items: center;
 }
 
-.search_choose_category.list_other_choose{
+.search-choose-category.list-other-choose{
   width: 100%;
-  height: 280rpx;
+  height: auto;
   display: relative;
   align-items: center;
 }
 
-.search_choose_category.list_other_choose.list1{
-  width: 100%;
-  height: 180rpx;
-  display: relative;
-  font-size: 28rpx;
-  align-items: center;
-
-}
-
-.search_choose_category.list.item{
+.search-choose-category.list.item{
   width: 33%;
 }
 
-.search_choose_category.list.item.position{
+.search-choose-category.list.item.position{
   width: 100%;
   padding-left: 30%;
   font-size: 36rpx;
   color:rgb(110, 128, 145);
+}
+
+/*search table*/
+
+.search-table{
+  margin: 100rpx 10rpx 10rpx 0rpx;
+  height: auto;
+  font-size: 32rpx;
+  position: relative;
+}
+
+.search-table-body{
+  margin: 2rpx 2rpx;
+}
+
+.search-table-body-row{
+  margin: 40rpx 10rpx 20rpx 0rpx;
+  background: white;
+}
+
+.search-table-body-row-cell{
+  display: flex;
+  border-bottom: 1rpx gray dotted;
+}
+
+.search-table-body-cell-left{
+  width: 30%;
+}
+
+.search-table-body-cell-right{
+  width: 70%;
 }

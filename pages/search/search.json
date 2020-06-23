@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "select":"/pages/components/pages/area-selection/area-selection"
+    "search-condition":"/pages/components/pages/search-condition/search-condtion"
   }
 }

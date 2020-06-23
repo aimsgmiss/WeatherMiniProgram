@@ -50,6 +50,10 @@ Component({
     }
   },
   lifetimes: {
+    created(){
+
+    },
+
     attached() {
       // 属性名称转换, 如果不是 { id: '', name:'' } 格式，则转为 { id: '', name:'' } 格式
       let result = []
@@ -63,6 +67,10 @@ Component({
         current: Object.assign({}, this.data.defaultOption),
         result: result
       })
+    },
+
+    detached(){
+
     }
   }
 })

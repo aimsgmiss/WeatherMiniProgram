@@ -1,0 +1,23 @@
+<!--pages/components/pages/date-picker/date-picker.wxml-->
+<view class="date-picker">
+  <view class="title-text">
+    <text>日期选择</text>
+  </view>
+  <view class="border-bottom"></view>
+  <view class="date-picker-content">
+    <view class="date-picker-content-item">
+      <text class="date-picker-content-item title">开始时间</text>
+      <picker class="date-picker-content-item value" mode="date" value="{{startDate}}" bindchange="bindStartDateChange">
+          <view>{{startDate}}</view>
+      </picker>
+    </view>
+    <view class="border-bottom"></view>
+    <view class="date-picker-content-item">
+      <text class="date-picker-content-item title">结束时间</text>
+       <picker class="date-picker-content-item value" mode="date" value="{{endDate}}" bindchange="bindEndDateChange">
+          <view>{{endDate}}</view>
+        </picker>
+    </view>
+  </view>
+ 
+</view>
