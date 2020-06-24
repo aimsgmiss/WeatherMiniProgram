@@ -8,21 +8,21 @@ Component({
       type: Array,
       value: []
     },
-    key: {
-      type: String,
-      value: 'id'
-    },
-    text: {
-      type: String,
-      value: 'name'
-    }
+    // key: {
+    //   type: String,
+    //   value: 'id'
+    // },
+    // text: {
+    //   type: String,
+    //   value: 'name'
+    // }
   },
 
   /**
    * Component initial data
    */
   data: {
-   
+    currentArea:[]
   },
 
   /**
@@ -33,12 +33,18 @@ Component({
       this.setData({
         isLoading:true
       });
-      var myEventDetail = {} // detail对象，提供给事件监听函数
-      var myEventOption = {} // 触发事件的选项
-      this.triggerEvent('searchEvent', myEventDetail, myEventOption)
-    }
+      var eventDetail = {area:this.data.currentArea} // detail对象，提供给事件监听函数
+      var eventOption = {} // 触发事件的选项
+      this.triggerEvent('searchEvent', eventDetail, eventOption)
+    },
+    
+    areaDidChange(e){
+      this.setData({
+        currentArea:e.detail
+      })
+    },
   },
-
+  
   lifetimes:{
     attached(){
       this.setData({

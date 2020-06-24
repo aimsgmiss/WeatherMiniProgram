@@ -31,12 +31,20 @@
 }
 
 .option {
-  display: block;
+  display: flex;
   width: 100%;
   padding-left: 30rpx;
   line-height: 100rpx;
   border-bottom: 1rpx solid #eee;
   background: rgb(245,245,245);
+}
+
+.option-left{
+  width: 40%;
+}
+
+.option-right{
+  width: 60%;
 }
 
 .option:last-child {

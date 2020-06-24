@@ -11,6 +11,10 @@ Component({
     text: {
       type: String,
       value: 'name'
+    },
+    checked:{
+      type:Boolean,
+      value:true
     }
   },
   data: {
@@ -20,10 +24,19 @@ Component({
   },
   methods: {
     optionTap(e) {
-      let dataset = e.target.dataset
+      let dataset = e.currentTarget.dataset
+      const items = this.data.options
+      for(let index = 0,len = items.length; index < len;index++){
+        if(items[index].id == dataset.id){
+          items[index].checked = true
+        }else{
+          items[index].checked = false
+        }
+      }
       this.setData({
         current: dataset,
-        isShow: false
+        isShow: false,
+        result:items
       });
 
       // 调用父组件方法，并传参
@@ -48,13 +61,14 @@ Component({
     attached() {
       var firstElement = {}
       for (let item of this.data.options) {
-        firstElement = {id:item.id,name:item.name}
+        firstElement = {id:item.id,name:item.name,checked:item.checked}
         break;
       }
       this.setData({
         current:firstElement,
         result: this.data.options,
       })
+      this.triggerEvent("change", { id:firstElement.id,name:firstElement.name})
     }
   }
 })

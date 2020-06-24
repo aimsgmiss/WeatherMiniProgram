@@ -39,7 +39,8 @@ App({
     area:[
       {
         id: '001',
-        name: '东坡区'
+        name: '东坡区',
+        checked: true
       }, 
       {
         id: '002',

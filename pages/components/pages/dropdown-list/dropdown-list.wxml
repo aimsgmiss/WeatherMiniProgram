@@ -2,12 +2,13 @@
   <view class="select-current" catchtap="openClose">
     <text class="current-name">{{current.name}}</text>
   </view>
-  <view class="option-list" wx:if="{{isShow}}" catchtap="optionTap">
-    <text class="option"
-      wx:for="{{result}}"
-      wx:key="{{item.id}}"
-      data-id="{{item.id}}"
-      data-name="{{item.name}}">{{item.name}}
-    </text>
+  <view class="option-list" wx:if="{{isShow}}">
+  <radio-group>
+    <view class="option" wx:for="{{result}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-name="{{item.name}}" catchtap="optionTap">
+        <view class="option-left"> {{item.name}}</view>
+        <radio class="option-right" value="{{item.value}}" checked="{{item.checked}}"/>
+    </view>
+  </radio-group>
+    
   </view>
 </view>

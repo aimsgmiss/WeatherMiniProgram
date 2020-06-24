@@ -2,10 +2,10 @@
 <view>
   <view class="search-condition-item">
     <text class="title-text">区域选择</text><view class="border-bottom"></view>   
-    <dropdown-list id="seach-condition-area" options="{{options}}" key="id" text="name" bind:change="change"></dropdown-list>
+    <dropdown-list id="seach-condition-area" options="{{options}}" key="id" text="name" bind:change="areaDidChange"></dropdown-list>
   </view>
   <view class="search-condition-item">
-    <date-picker id="date-picker"></date-picker>
+    <date-picker id="date-picker" bind:startevent="startTimeDidChange" bind:endevent="endTimeDidChange" ></date-picker>
   </view>
   <view class="search-condition-item">
     <button bindtap="onSearchBtnClick" type="default" loading="{{isLoading}}">查询</button>

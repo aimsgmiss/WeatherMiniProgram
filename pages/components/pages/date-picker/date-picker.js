@@ -23,14 +23,22 @@ Component({
     bindStartDateChange(e){
       this.setData({
         startDate: e.detail.value
-      })
-      
+      }),
+      this.triggerEvent("startevent",e.detail.value,{})
     },
 
     bindEndDateChange(e){
       this.setData({
         endDate: e.detail.value
-      })
+      }),
+      this.triggerEvent("endevent",e.detail.value,{})
     }
+  },
+
+  lifetimes:{
+    attached(){
+      this.triggerEvent("startevent",this.data.startDate,{})
+      this.triggerEvent("endevent",this.data.endDate,{})
+    },
   }
 })

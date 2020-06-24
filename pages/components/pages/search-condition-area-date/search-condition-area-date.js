@@ -16,7 +16,10 @@ Component({
    */
   data: {
     isLoading:false,
-    options:getApp().globalData.area
+    options:getApp().globalData.area,
+    currentArea:[],
+    startTime:'',
+    endTime:''
   },
 
   /**
@@ -27,9 +30,28 @@ Component({
       this.setData({
         isLoading:true
       });
-      var myEventDetail = {} // detail对象，提供给事件监听函数
-      var myEventOption = {} // 触发事件的选项
-      this.triggerEvent('searchEvent', myEventDetail, myEventOption)
+      var eventDetail = {area:this.data.currentArea,startTime:this.data.startTime,endTime:this.data.endTime} // detail对象，提供给事件监听函数
+      var eventOption = {} // 触发事件的选项
+      this.triggerEvent('searchEvent', eventDetail, eventOption)
+    },
+
+    areaDidChange(e){
+      this.setData({
+        currentArea:e.detail
+      })
+    },
+
+    startTimeDidChange(e){
+      this.setData({
+        startTime:e.detail
+      })
+    },
+
+    endTimeDidChange(e){
+      this.setData({
+        endTime:e.detail
+      })
     }
+
   }
 })
