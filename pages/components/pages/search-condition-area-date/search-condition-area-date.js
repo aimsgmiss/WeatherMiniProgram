@@ -16,32 +16,7 @@ Component({
    */
   data: {
     isLoading:false,
-    options: [
-      {
-        cityId: '001',
-        cityName: '东坡区'
-      }, 
-      {
-        cityId: '002',
-        cityName: '彭山区'
-      }, 
-      {
-        cityId: '003',
-        cityName: '仁寿县'
-      },
-      {
-        cityId: '004',
-        cityName: '洪雅县'
-      },
-      {
-        cityId: '005',
-        cityName: '丹棱县'
-      },
-      {
-        cityId: '006',
-        cityName: '青神县'
-      }
-  ],
+    options:getApp().globalData.area
   },
 
   /**

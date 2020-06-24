@@ -4,13 +4,6 @@ Component({
       type: Array,
       value: []
     },
-    defaultOption: {
-      type: Object,
-      value: {
-        id: '000',
-        name: '全部区域'
-      }
-    },
     key: {
       type: String,
       value: 'id'
@@ -36,6 +29,7 @@ Component({
       // 调用父组件方法，并传参
       this.triggerEvent("change", { ...dataset })
     },
+    
     openClose() {
       this.setData({
         isShow: !this.data.isShow
@@ -49,28 +43,18 @@ Component({
       })
     }
   },
+
   lifetimes: {
-    created(){
-
-    },
-
     attached() {
-      // 属性名称转换, 如果不是 { id: '', name:'' } 格式，则转为 { id: '', name:'' } 格式
-      let result = []
-      if (this.data.key !== 'id' || this.data.text !== 'name') {       
-        for (let item of this.data.options) {
-          let { [this.data.key]: id, [this.data.text]: name } = item
-          result.push({ id, name })
-        }
+      var firstElement = {}
+      for (let item of this.data.options) {
+        firstElement = {id:item.id,name:item.name}
+        break;
       }
       this.setData({
-        current: Object.assign({}, this.data.defaultOption),
-        result: result
+        current:firstElement,
+        result: this.data.options,
       })
-    },
-
-    detached(){
-
     }
   }
 })

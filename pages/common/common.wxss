@@ -11,3 +11,12 @@
 .border-bottom{
     border-bottom:1rpx dotted;
 }
+
+.search-condition-item{
+    margin: 30rpx 0rpx;
+    padding:10rpx 10rpx 10rpx 0rpx;
+    height: auto;
+    border-radius: 10rpx;
+    background:rgb(6, 77, 134);
+    color:white
+  }

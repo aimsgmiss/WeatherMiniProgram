@@ -1,16 +1,8 @@
 <view class="select-box">
-  <view class="title-text">
-    <text class="title-text">区域选择</text>
-  </view>
-  <view class="border-bottom"></view>
   <view class="select-current" catchtap="openClose">
     <text class="current-name">{{current.name}}</text>
   </view>
   <view class="option-list" wx:if="{{isShow}}" catchtap="optionTap">
-    <view class="option"
-      data-id="{{defaultOption.id}}"
-      data-name="{{defaultOption.name}}">{{defaultOption.name}}
-    </view>
     <text class="option"
       wx:for="{{result}}"
       wx:key="{{item.id}}"

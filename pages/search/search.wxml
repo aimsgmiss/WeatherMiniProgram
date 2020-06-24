@@ -8,23 +8,22 @@
     <view bindtap='cancelsearch' class="tit-seabox-cancel-btn">取消</view>
 </view>
 
-<view wx:if="{{currentSelectedCategory == '朋友圈'}}" class="search-choose-category list-other-choose">
-  <search-condition bindsearchEvent="searchData" id="searchFriendBtn"></search-condition>
+<view wx:if="{{currentSelectedCategory == '防雷检测资质单位'}}" class="search-choose-category list-other-choose">
+  <search-condition-area-level bindsearchEvent="searchData"></search-condition-area-level> 
 </view>
-<view wx:if="{{currentSelectedCategory == '文章'}}">
-  <search-condition bindsearchEvent="searchData"></search-condition> 
+<view wx:if="{{currentSelectedCategory == '防雷监管对象'}}">
+  <search-condition-area-date bindsearchEvent="searchData" id="searchFriendBtn"></search-condition-area-date>
 </view>
-<view wx:if="{{currentSelectedCategory == '公众号'}}">
-  <search-condition bindsearchEvent="searchData"></search-condition>
+<view wx:if="{{currentSelectedCategory == '防雷安全检查查询'}}">
+  <search-condition-area-date bindsearchEvent="searchData"></search-condition-area-date>
 </view> 
-<view wx:if="{{currentSelectedCategory == '小程序'}}">
-  <search-condition bindsearchEvent="searchData"></search-condition>
+<view wx:if="{{currentSelectedCategory == '防雷检测结果查询'}}">
+  <search-condition-area bindsearchEvent="searchData"></search-condition-area>
  </view>
-<view wx:if="{{currentSelectedCategory == '音乐'}}">
-  <search-condition bindsearchEvent="searchData"></search-condition>
+<view wx:if="{{currentSelectedCategory == '气球施放活动记录'}}">
+  <search-condition-area-date bindsearchEvent="searchData"></search-condition-area-date>
 </view>
-<view wx:if="{{currentSelectedCategory == '表情'}}">
-  <search-condition bindsearchEvent="searchData"></search-condition>
+<view wx:if="{{currentSelectedCategory == '气球施放资质单位'}}">
 </view>
 <view class="search-choose-category" wx:if="{{currentSelectedCategory.length == 0}}">
   <view class="search-choose-category title">搜索指定内容 </view>

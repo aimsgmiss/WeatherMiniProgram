@@ -32,6 +32,5 @@ Component({
         endDate: e.detail.value
       })
     }
-
   }
 })

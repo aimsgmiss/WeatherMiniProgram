@@ -2,8 +2,7 @@
   "pages":[
     "pages/search/search",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/components/pages/area-selection/area-selection"
+    "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",

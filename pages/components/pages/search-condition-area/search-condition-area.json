@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "dropdown-list":"/pages/components/pages/dropdown-list/dropdown-list"
+  }
+}

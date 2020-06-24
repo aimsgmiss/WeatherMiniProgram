@@ -1,7 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "area-selection":"/pages/components/pages/area-selection/area-selection",
+    "dropdown-list":"/pages/components/pages/dropdown-list/dropdown-list",
     "date-picker":"/pages/components/pages/date-picker/date-picker"
   }
 }

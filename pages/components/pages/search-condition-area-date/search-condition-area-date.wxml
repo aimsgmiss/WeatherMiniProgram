@@ -1,7 +1,8 @@
 <!--pages/components/pages/search-condition/search-condtion.wxml-->
 <view>
   <view class="search-condition-item">
-    <area-selection id="area-selection" options="{{options}}" key="cityId" text="cityName" bind:change="change"></area-selection>
+    <text class="title-text">区域选择</text><view class="border-bottom"></view>   
+    <dropdown-list id="seach-condition-area" options="{{options}}" key="id" text="name" bind:change="change"></dropdown-list>
   </view>
   <view class="search-condition-item">
     <date-picker id="date-picker"></date-picker>

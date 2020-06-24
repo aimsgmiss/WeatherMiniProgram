@@ -35,6 +35,32 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    area:[
+      {
+        id: '001',
+        name: '东坡区'
+      }, 
+      {
+        id: '002',
+        name: '彭山区'
+      }, 
+      {
+        id: '003',
+        name: '仁寿县'
+      },
+      {
+        id: '004',
+        name: '洪雅县'
+      },
+      {
+        id: '005',
+        name: '丹棱县'
+      },
+      {
+        id: '006',
+        name: '青神县'
+      }
+  ]
   }
 })

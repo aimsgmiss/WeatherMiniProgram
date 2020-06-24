@@ -1,0 +1,20 @@
+
+<view>
+  <view class="search-condition-item">
+    <view>
+      <text class="title-text">范围选择</text>
+    </view>
+    <view class="border-bottom"></view>
+    <dropdown-list id="area-selection-position" options="{{positions}}" key="id" text="name" bind:change="change"></dropdown-list>
+  </view>
+  <view class="search-condition-item">
+      <view>
+      <text class="title-text">等级选择</text>
+      </view>
+      <view class="border-bottom"></view>
+      <dropdown-list id="area-selection-levels" options="{{levels}}" key="id" text="name" bind:change="change"></dropdown-list>
+  </view>
+  <view class="search-condition-item">
+    <button bindtap="onSearchBtnClick" type="default" loading="{{isLoading}}">查询</button>
+  </view>
+</view>

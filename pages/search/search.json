@@ -1,6 +1,8 @@
 {
   "component": true,
   "usingComponents": {
-    "search-condition":"/pages/components/pages/search-condition/search-condtion"
+    "search-condition-area-date":"/pages/components/pages/search-condition-area-date/search-condition-area-date",
+    "search-condition-area-level":"/pages/components/pages/search-condition-area-level/search-condition-area-level",
+    "search-condition-area":"/pages/components/pages/search-condition-area/search-condition-area"
   }
 }
