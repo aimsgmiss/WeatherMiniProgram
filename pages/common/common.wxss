@@ -17,6 +17,6 @@
     padding:10rpx 10rpx 10rpx 0rpx;
     height: auto;
     border-radius: 10rpx;
-    background:rgb(6, 77, 134);
-    color:white
+    background: rgb(245,245,245);
+    color:black;
   }

@@ -36,7 +36,7 @@
   padding-left: 30rpx;
   line-height: 100rpx;
   border-bottom: 1rpx solid #eee;
-  background:rgb(6, 77, 134);
+  background: rgb(245,245,245);
 }
 
 .option:last-child {

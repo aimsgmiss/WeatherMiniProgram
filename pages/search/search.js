@@ -1,3 +1,5 @@
+const config = require('../../config')
+
 Component({
   properties: {
     searchstr: {     //input  值
@@ -86,76 +88,119 @@ Component({
     nextPage(){
       console.log('next page click')
     },
-    searchData(){
-      console.log("searchData:..............")
+
+    searchData(event){
+     var requestUrl = ''
+     switch(parseInt(event.currentTarget.dataset.urltype)){
+      case 1:
+        requestUrl = config.requestUrl
+        break;
+      case 2:
+        requestUrl = config.requestUrl
+        break;
+      case 3:
+        requestUrl = config.requestUrl
+        break;
+      case 4:
+        requestUrl = config.requestUrl
+        break;
+      case 5:
+        requestUrl = config.requestUrl
+        break;
+      default:
+        break;
+     }
+      wx.showToast({
+        title: '请求成功',
+        icon: 'success',
+        mask: true,
+      })
+      wx.request({
+        url: requestUrl,
+        data: {
+          noncestr: Date.now()
+        },
+        success(result) {
+          wx.showToast({
+            title: '请求成功',
+            icon: 'success',
+            mask: true,
+            duration,
+          })
+          console.log('request success', result)
+        },
+        fail({errMsg}) {
+          console.log('request fail', errMsg)
+        }
+      })
       this.dataTableSource = [
         {
           name:"眉山市仁寿县",
-          address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'于淑清',
+          address:"西藏班公湖",
+          linkname:'周永康',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"眉山市东坡区",
-          address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'于淑清',
+          address:"西藏班公湖",
+          linkname:'周永康',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"眉山市清神县",
-          address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'于淑清',
+          address:"西藏班公湖",
+          linkname:'周永康',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"眉山市东坡区2",
-          address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'于淑清',
+          address:"西藏班公湖",
+          linkname:'周永康',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"成都市宣汉县",
-          address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'于淑清',
+          address:"西藏班公湖",
+          linkname:'周永康',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"上海网络科技有限公司",
-          address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'于淑清',
+          address:"西藏班公湖",
+          linkname:'周永康',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
-          name:"宁波比孚",
-          address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'马于淑清',
+          name:"希米亚斯",
+          address:"西藏班公湖",
+          linkname:'马周永康',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"上海网络科技有限公司2",
-          address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'于淑清',
+          address:"西藏班公湖",
+          linkname:'周永康',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"上海网络科技有限公司3",
-          address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'于淑清',
+          address:"西藏班公湖",
+          linkname:'周永康',
           telphone:'12300',
           date:'2020-6-20'
         },
         {
           name:"波波维奇公司",
-          address:"上海市徐汇区漕河泾经济开发区古美路1528号A6栋4号楼",
-          linkname:'于淑清',
+          address:"西藏班公湖",
+          linkname:'周永康',
           telphone:'12300',
           date:'2020-6-20'
         },

@@ -9,19 +9,19 @@
 </view>
 
 <view wx:if="{{currentSelectedCategory == '防雷检测资质单位'}}" class="search-choose-category list-other-choose">
-  <search-condition-area-level bindsearchEvent="searchData"></search-condition-area-level> 
+  <search-condition-area-level data-urltype="1" bindsearchEvent="searchData"></search-condition-area-level> 
 </view>
 <view wx:if="{{currentSelectedCategory == '防雷监管对象'}}">
-  <search-condition-area-date bindsearchEvent="searchData" id="searchFriendBtn"></search-condition-area-date>
+  <search-condition-area-date data-urltype="2" bindsearchEvent="searchData" id="searchFriendBtn"></search-condition-area-date>
 </view>
 <view wx:if="{{currentSelectedCategory == '防雷安全检查查询'}}">
-  <search-condition-area-date bindsearchEvent="searchData"></search-condition-area-date>
+  <search-condition-area-date data-urltype="3" bindsearchEvent="searchData"></search-condition-area-date>
 </view> 
 <view wx:if="{{currentSelectedCategory == '防雷检测结果查询'}}">
-  <search-condition-area bindsearchEvent="searchData"></search-condition-area>
+  <search-condition-area data-urltype="4" bindsearchEvent="searchData"></search-condition-area>
  </view>
 <view wx:if="{{currentSelectedCategory == '气球施放活动记录'}}">
-  <search-condition-area-date bindsearchEvent="searchData"></search-condition-area-date>
+  <search-condition-area-date data-urltype="5" bindsearchEvent="searchData"></search-condition-area-date>
 </view>
 <view wx:if="{{currentSelectedCategory == '气球施放资质单位'}}">
 </view>
