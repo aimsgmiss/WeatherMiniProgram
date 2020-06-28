@@ -1,0 +1,5 @@
+<view>
+  <search-result-header id="search-result-header" bindPreviousPageEvent="onPreviousPage" bindNextPageEvent="onNextPage">
+  </search-result-header>
+  <search-result-body id="search-result-body" bindPreviousPageEvent="onPreviousPage" bindNextPageEvent="onNextPage"></search-result-body>
+</view>

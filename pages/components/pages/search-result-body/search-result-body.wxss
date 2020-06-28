@@ -1,0 +1,39 @@
+/*search table*/
+/* background: RGB（245,245,245）;*/
+.search-table{
+  margin: 20rpx 0rpx 10rpx 0rpx;
+  height: auto;
+  font-size: 32rpx;
+  position: relative;
+  background:hsl(0, 0%, 100%);
+  color: black;
+}
+
+.search-table-body{
+  margin: 0rpx 2rpx;
+}
+
+.search-table-body-row{
+  margin: 80rpx 10rpx 80rpx 0rpx;
+  border-radius: 25rpx;
+}
+
+.search-table-body-row-cell{
+  margin: 30rpx 10rpx 30rpx 0rpx;
+  display: flex;
+  border-bottom: 1rpx gray dotted;
+}
+
+.search-table-body-row-cell:last-child{
+  border-bottom: none;
+}
+
+.search-table-body-cell-left{
+  padding-left: 20rpx;
+  width: 30%;
+}
+
+.search-table-body-cell-right{
+  padding-left: 20rpx;
+  width: 70%;
+}

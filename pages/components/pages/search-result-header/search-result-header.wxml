@@ -1,0 +1,11 @@
+
+<view class="search-result-header">
+  <view class="search-result-header-left" bindtap="previousPage">
+    <view class="navigator-arrow-before"></view>
+    <view class="">前一页</view>
+  </view>
+  <view class="search-result-header-right" bindtap="nextPage">
+    <view class="">后一页</view>
+    <view class="navigator-arrow-after"></view>
+  </view>
+</view>

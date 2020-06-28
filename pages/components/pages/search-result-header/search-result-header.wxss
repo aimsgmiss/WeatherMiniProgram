@@ -1,0 +1,52 @@
+/* pages/components/pages/search-result-header/search-result-header.wxss */
+
+.search-result-header{
+  font-size: 32rpx;
+  height: 50rpx;
+  padding: 20rpx 10rpx 10rpx 10rpx;
+  display: flex;
+}
+
+.search-result-header-left{
+  width: 80%;
+  display: flex;
+}
+
+.search-result-header-right{
+  width: 20%;
+  display: flex;
+}
+
+.navigator-arrow-before{
+  padding-left: 26rpx;
+  position: relative;
+}
+
+.navigator-arrow-before:before{
+  content: "";
+  display: inline-block;
+  height: 22rpx;
+  width: 22rpx;
+  border-width: 0rpx 0rpx 2rpx 2rpx;
+  border-color: var(--weui-FG-2);
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  left: 28rpx;
+}
+
+.navigator-arrow-after {
+  padding-right: 28rpx;
+  position: relative;
+}
+
+.navigator-arrow-after:after{
+  content: "";
+  display: inline-block;
+  height: 22rpx;
+  width: 22rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: var(--weui-FG-2);
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  right: 28rpx;
+}

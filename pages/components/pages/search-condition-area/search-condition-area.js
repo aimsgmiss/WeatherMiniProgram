@@ -8,14 +8,6 @@ Component({
       type: Array,
       value: []
     },
-    // key: {
-    //   type: String,
-    //   value: 'id'
-    // },
-    // text: {
-    //   type: String,
-    //   value: 'name'
-    // }
   },
 
   /**

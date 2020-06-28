@@ -1,0 +1,111 @@
+
+<view class="search-table">
+    <view class="search-table-body">
+      <scroll-view  id="scroll-view" scroll-y="true" style="height:{{scrollViewHeight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <!-- 防雷检测资质单位-->
+      <view wx:for="{{dataTableSource1}}" wx:for-item="item" wx:key="*this" class="search-table-body-row">
+        <view wx:if="{{item.name.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">单位:</view> <view class="search-table-body-cell-right"> {{item.name}}</view>
+        </view>
+        <view wx:if="{{item.address.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">地址:</view> <view class="search-table-body-cell-right"> {{item.address}}</view>
+        </view>
+        <view wx:if="{{item.linkname.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">联系人:</view> <view class="search-table-body-cell-right"> {{item.linkname}}</view>
+        </view>
+        <view wx:if="{{item.telphone.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">电话:</view> <view class="search-table-body-cell-right"> {{item.telphone}}</view>
+        </view>
+        <view wx:if="{{item.rank.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">资质等级:</view> <view class="search-table-body-cell-right"> {{item.rank}}</view>
+        </view>
+      </view>
+
+      <!-- 防雷监管对象-->
+      <view wx:for="{{dataTableSource2}}" wx:for-item="item" wx:key="*this" class="search-table-body-row">
+        <view wx:if="{{item.name.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">单位:</view> <view class="search-table-body-cell-right"> {{item.name}}</view>
+        </view>
+        <view wx:if="{{item.address.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">地址:</view> <view class="search-table-body-cell-right"> {{item.address}}</view>
+        </view>
+        <view wx:if="{{item.linkname.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">联系人:</view> <view class="search-table-body-cell-right"> {{item.linkname}}</view>
+        </view>
+        <view wx:if="{{item.telphone.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">电话:</view> <view class="search-table-body-cell-right"> {{item.telphone}}</view>
+        </view>
+        <view wx:if="{{item.date.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">超级日期:</view> <view class="search-table-body-cell-right"> {{item.date}}</view>
+        </view>
+        <view wx:if="{{item.report.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">检测报告:</view> <view class="search-table-body-cell-right"> {{item.report}}</view>
+        </view>
+      </view>
+
+      <!-- 防雷安全检查查询 表格待定-->
+      <view wx:for="{{dataTableSource3}}" wx:for-item="item" wx:key="*this" class="search-table-body-row">
+        <view wx:if="{{item.name.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">单位:</view> <view class="search-table-body-cell-right"> {{item.name}}</view>
+        </view>
+        <view wx:if="{{item.address.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">地址:</view> <view class="search-table-body-cell-right"> {{item.address}}</view>
+        </view>
+        <view wx:if="{{item.linkname.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">联系人:</view> <view class="search-table-body-cell-right"> {{item.linkname}}</view>
+        </view>
+        <view wx:if="{{item.telphone.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">电话:</view> <view class="search-table-body-cell-right"> {{item.telphone}}</view>
+        </view>
+        <view wx:if="{{item.date.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">日期:</view> <view class="search-table-body-cell-right"> {{item.date}}</view>
+        </view>
+      </view>
+
+      <!-- 防雷检测结果查询 -->
+      <view class="search-table-body-row">
+        <view>制作中</view>
+        <view>还是制作完成</view>
+      </view>
+
+      <!-- 气球释放活动记录-->
+      <view wx:for="{{dataTableSource4}}" wx:for-item="item" wx:key="*this" class="search-table-body-row">
+        <view wx:if="{{item.name.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">单位:</view> <view class="search-table-body-cell-right"> {{item.name}}</view>
+        </view>
+        <view wx:if="{{item.address.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">地址:</view> <view class="search-table-body-cell-right"> {{item.address}}</view>
+        </view>
+        <view wx:if="{{item.linkname.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">联系人:</view> <view class="search-table-body-cell-right"> {{item.linkname}}</view>
+        </view>
+        <view wx:if="{{item.telphone.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">电话:</view> <view class="search-table-body-cell-right"> {{item.telphone}}</view>
+        </view>
+        <view wx:if="{{item.date.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">日期:</view> <view class="search-table-body-cell-right"> {{item.date}}</view>
+        </view>
+      </view>
+
+      <!-- 气球释放资质单位-->
+      <view wx:for="{{dataTableSource5}}" wx:for-item="item" wx:key="*this" class="search-table-body-row">
+        <view wx:if="{{item.name.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">单位:</view> <view class="search-table-body-cell-right"> {{item.name}}</view>
+        </view>
+        <view wx:if="{{item.address.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">地址:</view> <view class="search-table-body-cell-right"> {{item.address}}</view>
+        </view>
+        <view wx:if="{{item.linkname.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">联系人:</view> <view class="search-table-body-cell-right"> {{item.linkname}}</view>
+        </view>
+        <view wx:if="{{item.telphone.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">电话:</view> <view class="search-table-body-cell-right"> {{item.telphone}}</view>
+        </view>
+        <view wx:if="{{item.rank.length > 0}}" class="search-table-body-row-cell">  
+          <view class="search-table-body-cell-left">资质等级:</view> <view class="search-table-body-cell-right"> {{item.rank}}</view>
+        </view>
+      </view>
+
+    </scroll-view>
+  </view>
+</view>
