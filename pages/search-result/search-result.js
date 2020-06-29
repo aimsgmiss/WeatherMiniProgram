@@ -257,8 +257,8 @@ Page({
         report:'报告1'
       },
     ],
-    //气球释放资质单位
-    dataTableSource4:[
+    //气球释放活动
+    dataTableSource5:[
       {
         name:"眉山市仁寿县",
         address:"西藏班公湖",
@@ -340,8 +340,8 @@ Page({
         rank:'乙级'
       },
     ],
-    //防雷检测结果查询
-    dataTableSource5:[
+    //气球释放资质单位
+    dataTableSource6:[
       {
         name:"眉山市仁寿县",
         address:"西藏班公湖",
@@ -484,31 +484,37 @@ Page({
 
   searchData:function(){
     var searchType = this.data.searchType
+
     const body = this.selectComponent('#search-result-body')
     var requestUrl = ''
-    if(searchType == "防雷检测资质单位"){
+    if(searchType == '1'){
       this.setData({
         dataTableSource:this.data.dataTableSource1
       })
       requestUrl = config.requestUrl
-    }else if(searchType == "防雷监管对象"){
+    }else if(searchType == '2'){
       this.setData({
-        dataTableSource:this.data.dataTableSource2
+        //dataTableSource:this.data.dataTableSource2
       })
       requestUrl = config.requestUrl
-    }else if(searchType == "气球释放活动记录"){
+    }else if(searchType == '3'){
       this.setData({
-        dataTableSource:this.data.dataTableSource3
+        //dataTableSource:this.data.dataTableSource3
       })
       requestUrl = config.requestUrl
-    }else if(searchType == "气球释放资质单位"){
+    }else if(searchType == '4'){
       this.setData({
-        dataTableSource:this.data.dataTableSource4
+        //dataTableSource:[{"name":"完成"}]
       })
       requestUrl = config.requestUrl
-    }else if(searchType == "防雷检测结果查询"){
+    }else if(searchType == '5'){
       this.setData({
-        dataTableSource:this.data.dataTableSource5
+        //dataTableSource:this.data.dataTableSource5
+      })
+      requestUrl = config.requestUrl
+    }else if(searchType == '6'){
+      this.setData({
+        //dataTableSource:this.data.dataTableSource6
       })
       requestUrl = config.requestUrl
     }
@@ -555,28 +561,28 @@ Page({
     }
 
     var searchType = this.data.searchType
-    if(searchType == "防雷检测资质单位"){
+    if(searchType == '1'){
       body.setData({
-        dataTableSource1:tempArray
+        //lightDeteQualiUnitSource:tempArray
       })
-    }else if(searchType == "防雷监管对象"){
+    }else if(searchType == '2'){
       body.setData({
-        dataTableSource2:tempArray
-      })
-      
-    }else if(searchType == "气球释放活动记录"){
-      body.setData({
-        dataTableSource3:tempArray
+        //lightProtTargetSource:tempArray
       })
       
-    }else if(searchType == "气球释放资质单位"){
+    }else if(searchType == '3'){
       body.setData({
-        dataTableSource4:tempArray
+        //lightSafeInspeQuerySource:tempArray
+      })
+      
+    }else if(searchType == '5'){
+      body.setData({
+        //ballReleaseActivRecoSource:tempArray
       })
      
-    }else if(searchType == "防雷检测结果查询"){
+    }else if(searchType == '6'){
       body.setData({
-        dataTableSource5:tempArray
+        //ballReleaseQualiUnitSource:tempArray
       })
      
     }

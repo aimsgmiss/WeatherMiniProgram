@@ -16,12 +16,18 @@ properties:{
     type:Number,
     value:1
   },
-
-  dataTableSource1:Array,
-  dataTableSource2:Array,
-  dataTableSource3:Array,
-  dataTableSource4:Array,
-  dataTableSource5:Array
+  //防雷检测资质单位
+  lightDeteQualiUnitSource:Array,
+  //防雷监管对象
+  lightProtTargetSource:Array,
+  //防雷安全检查查询
+  lightSafeInspeQuerySource:Array,
+  //防雷检查结果查询
+  lightInspeResultQuerySource:Array,
+  //气球释放活动记录
+  ballReleaseActivRecoSource:Array,
+  //气球释放资质单位
+  ballReleaseQualiUnitSource:Array
 },
 
   data: {

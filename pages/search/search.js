@@ -42,11 +42,24 @@ Component({
     },
 
     categoryClick(event){
-      var id = event.currentTarget.id
-      this.setData({
-        currentSelectedCategory:id,
-        placeholder:id
+      var id = parseInt(event.currentTarget.id)
+      var json = getApp().globalData.categoryList
+      json.forEach(element => {
+        element.forEach(subElement => {
+            var placeholder = ''
+            if(subElement['id'] == id){
+              placeholder = subElement['name']
+              if(subElement['id'] == 4){
+                placeholder += ':电话号码'
+              }
+              this.setData({
+                currentSelectedCategory:id,
+                placeholder:placeholder
+              })
+            }
+        })
       })
+     
     },
 
     searchData(){
