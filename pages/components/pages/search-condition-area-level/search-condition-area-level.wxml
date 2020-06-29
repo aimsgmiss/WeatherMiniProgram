@@ -15,6 +15,6 @@
       <dropdown-list id="area-selection-levels" options="{{levels}}" key="id" text="name" bind:change="levelDidChange"></dropdown-list>
   </view>
   <view class="search-condition-item">
-    <button bindtap="onSearchBtnClick" type="default" loading="{{isLoading}}">查询</button>
+    <button bindtap="onSearchBtnClick" type="default">查询</button>
   </view>
 </view>

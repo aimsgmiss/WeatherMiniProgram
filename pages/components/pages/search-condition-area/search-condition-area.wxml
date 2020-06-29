@@ -4,7 +4,7 @@
     <dropdown-list id="seach-condition-area" options="{{options}}" key="id" text="name" bind:change="areaDidChange"></dropdown-list>
   </view>
   <view class="search-condition-item">
-    <button bindtap="onSearchBtnClick" type="default" loading="{{isLoading}}">查询</button>
+    <button bindtap="onSearchBtnClick" type="default">查询</button>
   </view>
 </view>
   

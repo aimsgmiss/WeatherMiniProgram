@@ -106,7 +106,6 @@
           <view class="search-table-body-cell-left">资质等级:</view> <view class="search-table-body-cell-right"> {{item.rank}}</view>
         </view>
       </view>
-      <view>已显示全部内容</view>
     </scroll-view>
   </view>
 </view>

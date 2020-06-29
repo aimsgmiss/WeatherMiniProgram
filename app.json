@@ -3,13 +3,14 @@
     "pages/search/search",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/search-result/search-result"
+    "pages/search-result/search-result",
+    "pages/business-appointment/business-appointment"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#ff0000",
+    "navigationBarTitleText": "MiniProgram",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "list": [
@@ -19,11 +20,11 @@
       },
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "todo"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "pagePath": "pages/business-appointment/business-appointment",
+        "text": "业务预约"
       }
     ]
   },

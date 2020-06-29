@@ -257,6 +257,11 @@ Page({
         report:'报告1'
       },
     ],
+    dataTableSource4:[
+      {
+        name:'完成'
+      }
+    ],
     //气球释放活动
     dataTableSource5:[
       {
@@ -429,6 +434,12 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    // wx.setNavigationBarColor({
+    //   frontColor: '#ffffff',
+    //   backgroundColor: '#ff0000',
+    // })
+
+  
     this.data.searchType = options.searchType
     this.searchData()
   },
@@ -494,27 +505,27 @@ Page({
       requestUrl = config.requestUrl
     }else if(searchType == '2'){
       this.setData({
-        //dataTableSource:this.data.dataTableSource2
+        dataTableSource:this.data.dataTableSource2
       })
       requestUrl = config.requestUrl
     }else if(searchType == '3'){
       this.setData({
-        //dataTableSource:this.data.dataTableSource3
+        dataTableSource:this.data.dataTableSource3
       })
       requestUrl = config.requestUrl
     }else if(searchType == '4'){
       this.setData({
-        //dataTableSource:[{"name":"完成"}]
+        dataTableSource:this.data.dataTableSource4
       })
       requestUrl = config.requestUrl
     }else if(searchType == '5'){
       this.setData({
-        //dataTableSource:this.data.dataTableSource5
+        dataTableSource:this.data.dataTableSource5
       })
       requestUrl = config.requestUrl
     }else if(searchType == '6'){
       this.setData({
-        //dataTableSource:this.data.dataTableSource6
+        dataTableSource:this.data.dataTableSource6
       })
       requestUrl = config.requestUrl
     }
@@ -563,28 +574,27 @@ Page({
     var searchType = this.data.searchType
     if(searchType == '1'){
       body.setData({
-        //lightDeteQualiUnitSource:tempArray
+        lightDeteQualiUnitSource:tempArray
       })
     }else if(searchType == '2'){
       body.setData({
-        //lightProtTargetSource:tempArray
+        lightProtTargetSource:tempArray
       })
       
     }else if(searchType == '3'){
       body.setData({
-        //lightSafeInspeQuerySource:tempArray
+        lightSafeInspeQuerySource:tempArray
       })
       
     }else if(searchType == '5'){
       body.setData({
-        //ballReleaseActivRecoSource:tempArray
+        ballReleaseActivRecoSource:tempArray
       })
      
     }else if(searchType == '6'){
       body.setData({
-        //ballReleaseQualiUnitSource:tempArray
+        ballReleaseQualiUnitSource:tempArray
       })
-     
     }
   },
 

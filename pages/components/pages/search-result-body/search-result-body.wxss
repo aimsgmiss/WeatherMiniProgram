@@ -5,7 +5,7 @@
   height: auto;
   font-size: 32rpx;
   position: relative;
-  background:hsl(0, 0%, 100%);
+  background: rgb(245,245,245);
   color: black;
 }
 
@@ -16,6 +16,7 @@
 .search-table-body-row{
   margin: 80rpx 10rpx 80rpx 0rpx;
   border-radius: 25rpx;
+  background: white;
 }
 
 .search-table-body-row-cell{

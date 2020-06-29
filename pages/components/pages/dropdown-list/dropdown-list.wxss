@@ -12,6 +12,7 @@
   padding: 0 20rpx;
   line-height: 70rpx;
   border-radius: 6rpx;
+  display: flex;
 }
 
 .current-name {
@@ -40,14 +41,48 @@
 }
 
 .option-left{
-  width: 40%;
+  width: 80%;
 }
 
 .option-right{
-  width: 60%;
+  width: 20%;
 }
 
 .option:last-child {
   border-bottom: none;
   padding-bottom: 0;
+}
+
+.navigator-arrow-down {
+  width: 15%;
+}
+
+.navigator-arrow-down:after{
+  content: "";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 0 6rpx 6rpx 0;
+  border-color: var(--weui-FG-2);
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  right: 28rpx;
+}
+
+.navigator-arrow-up {
+  
+  width: 15%;
+}
+
+.navigator-arrow-up:after{
+ 
+  content: "";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 6rpx 0 0 6rpx;
+  border-color: var(--weui-FG-2);
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  right: 28rpx;
 }

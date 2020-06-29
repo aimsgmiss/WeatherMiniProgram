@@ -62,9 +62,26 @@ Component({
      
     },
 
-    searchData(){
+    searchData(e){
+      var currentSelectedCategory = this.data.currentSelectedCategory
+      var url = '/pages/search-result/search-result?searchType=' + currentSelectedCategory
+      var parameters = ''
+      if(currentSelectedCategory == '1'){
+        parameters += '&area=' + e.detail.area.name + '&level=' + e.detail.level.name
+      }else if(currentSelectedCategory == '2'){
+        parameters += '&area=' + e.detail.area.name + '&startTime=' + e.detail.startTime + '&endTime=' + e.detail.endTime
+      }else if(currentSelectedCategory == '3'){
+        parameters += '&area=' + e.detail.area.name + '&startTime=' + e.detail.startTime + '&endTime=' + e.detail.endTime
+      }else if(currentSelectedCategory == '4'){
+        parameters += '&telphone=' + e.detail.value
+      }else if(currentSelectedCategory == '5'){
+        parameters += '&area=' + e.detail.area.name + '&startTime=' + e.detail.startTime + '&endTime=' + e.detail.endTime
+      }else if(currentSelectedCategory == '6'){
+        parameters += '&area=' + e.detail.value
+      }
+      getApp().globalData.searchParameters = parameters
       wx.navigateTo({
-        url: '/pages/search-result/search-result?searchType='+this.data.currentSelectedCategory,
+        url: url,
       })
    }
   }

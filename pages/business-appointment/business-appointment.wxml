@@ -1,0 +1,18 @@
+<view class="business-appointment">
+  <view class="business-appointment-row">
+    <text>我们的联系方式</text>
+    <view>上海市徐汇区古美路1528号</view>
+  </view>
+  <view class="business-appointment-row"> 
+    <text>您的联系方式</text>
+    <input type="text" class="input" style="padding-left:10rpx" type="text" focus='true' value="{{inputValue}}" placeholder="电话号码" bindblur="bindInputBlur" ></input>
+  </view>
+  <view class="business-appointment-row2">
+    <text style="padding-left:20rpx">预约业务</text>
+    <view class="border-bottom"></view>
+    <dropdown-list id="business-type" options="{{options}}" key="id" text="name" bind:change="businessTypeDidChange"></dropdown-list>
+  </view>
+  <view class="business-appointment-row"> 
+    <button type="primary" bindtap="onSubmit">提交</button>
+  </view>
+</view>

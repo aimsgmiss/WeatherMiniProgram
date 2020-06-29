@@ -8,6 +8,6 @@
     <date-picker id="date-picker" bind:startevent="startTimeDidChange" bind:endevent="endTimeDidChange" ></date-picker>
   </view>
   <view class="search-condition-item">
-    <button bindtap="onSearchBtnClick" type="default" loading="{{isLoading}}">查询</button>
+    <button bindtap="onSearchBtnClick" type="default">查询</button>
   </view>
 </view>
