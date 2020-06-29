@@ -59,7 +59,18 @@ Component({
             }
         })
       })
-     
+    },
+
+    validateDate(startTime,endTime){
+      if(startTime > endTime){
+        wx.showToast({
+          title: '开始日期大于结束日期',
+          icon:'none',
+          duration:1500
+        })
+        return false
+      }
+      return true
     },
 
     searchData(e){
@@ -69,12 +80,21 @@ Component({
       if(currentSelectedCategory == '1'){
         parameters += '&area=' + e.detail.area.name + '&level=' + e.detail.level.name
       }else if(currentSelectedCategory == '2'){
+        if(!this.validateDate(e.detail.startTime,e.detail.endTime)){
+          return
+        }
         parameters += '&area=' + e.detail.area.name + '&startTime=' + e.detail.startTime + '&endTime=' + e.detail.endTime
       }else if(currentSelectedCategory == '3'){
+        if(!this.validateDate(e.detail.startTime,e.detail.endTime)){
+          return
+        }
         parameters += '&area=' + e.detail.area.name + '&startTime=' + e.detail.startTime + '&endTime=' + e.detail.endTime
       }else if(currentSelectedCategory == '4'){
         parameters += '&telphone=' + e.detail.value
       }else if(currentSelectedCategory == '5'){
+        if(!this.validateDate(e.detail.startTime,e.detail.endTime)){
+          return
+        }
         parameters += '&area=' + e.detail.area.name + '&startTime=' + e.detail.startTime + '&endTime=' + e.detail.endTime
       }else if(currentSelectedCategory == '6'){
         parameters += '&area=' + e.detail.value

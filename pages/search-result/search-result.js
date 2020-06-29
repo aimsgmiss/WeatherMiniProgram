@@ -495,7 +495,6 @@ Page({
 
   searchData:function(){
     var searchType = this.data.searchType
-
     const body = this.selectComponent('#search-result-body')
     var requestUrl = ''
     if(searchType == '1'){
