@@ -1,16 +1,14 @@
- @import "../common/common.wxss";
 
 .business-appointment{
   padding: 80rpx 20rpx 20rpx 0rpx;
   height: auto;
   font-size: 32rpx;
-  background: rgb(245,245,245);
   color: black;
 }
 
 .business-appointment-row{
   margin-top: 30rpx;
-  height: 100rpx;
+  height: 160rpx;
   display: relative;
   padding: 20rpx 20rpx;
   background: white;
@@ -19,16 +17,16 @@
 
 .business-appointment-row2{
   margin-top: 30rpx;
-  height: 100rpx;
+  height: 160rpx;
   display: relative;
   padding: 20rpx 20rpx 20rpx 0rpx;
   background: white;
   border-radius: 20rpx;
 }
 
-.input{
+.business-appointment-input{
   width: 100%;
-  height: 60rpx;
-  border: 0.5rpx gray solid;
+  height: 80rpx;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
   border-radius:8rpx;
 }

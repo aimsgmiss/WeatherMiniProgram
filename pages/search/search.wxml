@@ -1,38 +1,40 @@
 <!-- 搜索框开始 -->
-<view class='tit-seabox'>
-    <view class="tit-seabox-bar {{addflag?'tit-seabox-add':''}} {{searchflag?'tit-start-search':''}}">
-        <icon type='search' size="32rpx"></icon>
-        <input type="text" bindconfirm="searchData" value='{{searchstr}}' auto-focus placeholder="{{placeholder}}"/>
-        <icon bindtap='clearSearchBar' wx:if="{{searchflag}}" type='clear' size="28rpx"></icon>
-    </view>
-    <view bindtap='cancelsearch' class="tit-seabox-cancel-btn">取消</view>
-</view>
+<view class="container">
+  <view class='tit-seabox'>
+      <view class="tit-seabox-bar {{addflag?'tit-seabox-add':''}} {{searchflag?'tit-start-search':''}}">
+          <icon type='search' size="32rpx"></icon>
+          <input type="text" bindconfirm="searchData" value='{{searchstr}}' auto-focus placeholder="{{placeholder}}"/>
+          <icon bindtap='clearSearchBar' wx:if="{{searchflag}}" type='clear' size="28rpx"></icon>
+      </view>
+      <view bindtap='cancelsearch' class="tit-seabox-cancel-btn">取消</view>
+  </view>
 
-<view wx:if="{{currentSelectedCategory == 1}}" class="search-choose-category list-other-choose">
-  <search-condition-area-level bindsearchEvent="searchData"></search-condition-area-level> 
-</view>
-<view wx:if="{{currentSelectedCategory == 2}}">
-  <search-condition-area-date bindsearchEvent="searchData" id="searchFriendBtn"></search-condition-area-date>
-</view>
-<view wx:if="{{currentSelectedCategory == 3}}">
-  <search-condition-area-date  bindsearchEvent="searchData"></search-condition-area-date>
-</view> 
-<view wx:if="{{currentSelectedCategory == 4}}">
-  <!-- <search-condition-area  bindsearchEvent="searchData"></search-condition-area> -->
- </view>
-<view wx:if="{{currentSelectedCategory == 5}}">
-  <search-condition-area-date bindsearchEvent="searchData"></search-condition-area-date>
-</view>
-<view wx:if="{{currentSelectedCategory == 6}}">
-</view>
-<view class="search-choose-category" wx:if="{{currentSelectedCategory.length == 0}}">
-  <view class="search-choose-category title">搜索指定内容 </view>
-  <view wx:for="{{categoryList}}" wx:for-item="category" wx:key="*this" class="search-choose-category list">
-    <view wx:for="{{category}}" wx:for-item="item" class="search-choose-category list item" wx:key="*this">
-      <view class="search-choose-category list item position" id="{{item.id}}" bindtap="categoryClick">{{item.name}}</view>
+  <view class="search-choose-category" wx:if="{{currentSelectedCategory.length == 0}}">
+    <view class="search-choose-category title">搜索指定内容 </view>
+    <view wx:for="{{categoryList}}" wx:for-item="category" wx:key="*this" class="search-choose-category list">
+      <view wx:for="{{category}}" wx:for-item="item" class="search-choose-category list item" wx:key="*this">
+        <view class="search-choose-category list item position" id="{{item.id}}" bindtap="categoryClick">{{item.name}}</view>
+      </view>
     </view>
   </view>
-</view>
 
+  <view wx:if="{{currentSelectedCategory == 1}}">
+    <search-condition-area-level bindsearchEvent="searchData"></search-condition-area-level> 
+  </view>
+  <view wx:if="{{currentSelectedCategory == 2}}">
+    <search-condition-area-date bindsearchEvent="searchData"></search-condition-area-date>
+  </view>
+  <view wx:if="{{currentSelectedCategory == 3}}">
+    <search-condition-area-date  bindsearchEvent="searchData"></search-condition-area-date>
+  </view> 
+  <view wx:if="{{currentSelectedCategory == 4}}">
+    <!-- <search-condition-area  bindsearchEvent="searchData"></search-condition-area> -->
+  </view>
+  <view wx:if="{{currentSelectedCategory == 5}}">
+    <search-condition-area-date bindsearchEvent="searchData"></search-condition-area-date>
+  </view>
+  <view wx:if="{{currentSelectedCategory == 6}}">
+  </view>
+</view>
 
 

@@ -1,11 +1,12 @@
-<view class="business-appointment">
+<view class="business-appointment container">
   <view class="business-appointment-row">
     <text>我们的联系方式</text>
+    <view class="border-bottom"></view>
     <view>上海市徐汇区古美路1528号</view>
   </view>
   <view class="business-appointment-row"> 
     <text>您的联系方式</text>
-    <input type="text" class="input" style="padding-left:10rpx" type="text" focus='true' value="{{inputValue}}" placeholder="电话号码" bindblur="bindInputBlur" ></input>
+    <input type="text" class="business-appointment-input" style="padding-left:10rpx" type="text" focus='true' value="{{inputValue}}" placeholder="电话号码" bindblur="bindInputBlur" ></input>
   </view>
   <view class="business-appointment-row2">
     <text style="padding-left:20rpx">预约业务</text>

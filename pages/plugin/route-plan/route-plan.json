@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+		"mp-actionsheet": "/pages/plugin/actionsheet/actionsheet"
+	},
+	"navigationBarTitleText": "路线规划"
+}

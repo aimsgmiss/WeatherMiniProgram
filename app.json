@@ -1,11 +1,22 @@
 {
   "pages": [
     "pages/search/search",
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/search-result/search-result",
-    "pages/business-appointment/business-appointment"
+    "pages/business-appointment/business-appointment",
+    "pages/plugin/route-plan/route-plan",
+    "pages/map/map"
   ],
+  "plugins": {
+    "routePlan": {
+      "version": "1.0.5",
+      "provider": "wx50b5593e81dd937a"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff0000",
@@ -16,15 +27,21 @@
     "list": [
       {
         "pagePath": "pages/search/search",
-        "text": "查找"
+        "text": "查找",
+        "iconPath":"/image/wechat.png",
+        "selectedIconPath":"/image/wechatHL.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "todo"
+        "pagePath": "pages/map/map",
+        "text": "导航",
+        "iconPath":"/image/icon_component.png",
+        "selectedIconPath":"/image/icon_component_HL.png"
       },
       {
         "pagePath": "pages/business-appointment/business-appointment",
-        "text": "业务预约"
+        "text": "业务预约",
+        "iconPath":"/image/icon_cloud.png",
+        "selectedIconPath":"/image/icon_cloud_HL.png"
       }
     ]
   },

@@ -1,9 +1,10 @@
 <view>
-  <view class="search-condition-item">
-    <text class="title-text">区域选择</text><view class="border-bottom"></view>   
+  <view class="search-condition-item row-two">
+    <text class="title-text">区域选择</text>
+    <view class="border-bottom"></view>
     <dropdown-list id="seach-condition-area" options="{{options}}" key="id" text="name" bind:change="areaDidChange"></dropdown-list>
   </view>
-  <view class="search-condition-item">
+  <view class="search-condition-item row-one">
     <button bindtap="onSearchBtnClick" type="default">查询</button>
   </view>
 </view>

@@ -1,2 +1,1 @@
-/* pages/components/pages/search-condition-area-level/search-condition-area-level.wxss */
-@import "../../../common/common.wxss"
+@import "../../../../app.wxss"

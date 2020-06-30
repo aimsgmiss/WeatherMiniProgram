@@ -1,20 +1,16 @@
 
-<view>
-  <view class="search-condition-item">
-    <view>
-      <text class="title-text">范围选择</text>
-    </view>
+<view class="container">
+  <view class="search-condition-item row-two">
+    <text class="title-text">范围选择</text>
     <view class="border-bottom"></view>
     <dropdown-list id="area-selection-position" options="{{positions}}" key="id" text="name" bind:change="areaDidChange"></dropdown-list>
   </view>
-  <view class="search-condition-item">
-      <view>
-      <text class="title-text">等级选择</text>
-      </view>
-      <view class="border-bottom"></view>
-      <dropdown-list id="area-selection-levels" options="{{levels}}" key="id" text="name" bind:change="levelDidChange"></dropdown-list>
+  <view class="search-condition-item row-two">
+    <text class="title-text">等级选择</text>
+    <view class="border-bottom"></view>
+    <dropdown-list id="area-selection-levels" options="{{levels}}" key="id" text="name" bind:change="levelDidChange"></dropdown-list>
   </view>
-  <view class="search-condition-item">
+  <view class="search-condition-item row-one">
     <button bindtap="onSearchBtnClick" type="default">查询</button>
   </view>
 </view>

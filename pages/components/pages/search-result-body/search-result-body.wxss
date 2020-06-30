@@ -22,7 +22,7 @@
 .search-table-body-row-cell{
   margin: 30rpx 10rpx 30rpx 0rpx;
   display: flex;
-  border-bottom: 1rpx gray dotted;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
 }
 
 .search-table-body-row-cell:last-child{

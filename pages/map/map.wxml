@@ -1,0 +1,21 @@
+<view>
+  <map id="map" longitude="{{longitude}}"
+  latitude="{{latitude}}"
+  scale="14"
+  bindcontroltap="controltap" 
+  bindmarkertap="markertap" 
+  polyline="{{polyline}}"
+  bindregionchange="regionchange" 
+  show-location="true"
+  show-compass="true"
+  show-scale="true"
+  enable-traffic="true"
+  show-location style="width: 100%; height:{{mapHeight}}rpx;">
+  </map>
+  <cover-view class="cover-view" bindtap="onRoutePlan">
+    <button type="primary" plain="true" bindtap="onRoutePlan"> 路线规划</button>
+  </cover-view>
+</view>
+
+
+<!-- markers="{{markers}}"  -->

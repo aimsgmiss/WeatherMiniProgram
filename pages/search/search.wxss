@@ -1,4 +1,3 @@
-@import "../common/common.wxss";
 
 .tit-seabox{
   background: #fff;
@@ -65,13 +64,6 @@
   height: 80rpx;
   display: flex;
   font-size: 28rpx;
-}
-
-.search-choose-category.list-other-choose{
-  width: 100%;
-  height: auto;
-  display: relative;
-  align-items: center;
 }
 
 .search-choose-category.list.item{

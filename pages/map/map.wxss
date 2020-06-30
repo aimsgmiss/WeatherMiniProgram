@@ -1,0 +1,8 @@
+/* pages/map/map.wxss */
+
+.cover-view {
+  position: absolute;
+  bottom: calc(10%);
+  left: calc(20%);
+}
+

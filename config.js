@@ -6,7 +6,7 @@ const host = '14592619.qcloud.la'
 
 const config = {
   host,
-  requestUrl: 'https://${host}/testRequest'
+  requestUrl: 'https://${host}/testRequest',
 
 }
 
