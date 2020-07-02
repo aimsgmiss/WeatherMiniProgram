@@ -44,6 +44,32 @@ Page({
   controltap(e) {
     console.log(e.detail.controlId)
   },
+
+  onReady(){
+     // 使用 wx.createContext 获取绘图上下文 context
+     var context = wx.createCanvasContext('firstCanvas')
+     //context.setLineWidth(5)
+     //context.rect(0, 0, 200, 200)
+     context.setFillStyle('white')
+     context.setLineWidth(2)
+     //context.moveTo(160, 100)
+     context.arc(100, 100, 30, 0, 2 * Math.PI, true)
+    
+     //context.moveTo(140, 100)
+     //context.arc(100, 100, 40, 0, Math.PI, false)
+     //context.moveTo(85, 80)
+     //context.arc(80, 80, 5, 0, 2 * Math.PI, true)
+     //context.moveTo(125, 80)
+     //context.arc(120, 80, 5, 0, 2 * Math.PI, true)
+   
+     context.stroke()
+
+    context.setFontSize(20)
+     context.fillText('路线',50,50)
+     context.setFontSize(20)
+     context.draw()
+  },
+
   onLoad(){
     wx.getLocation({
       type: 'gcj02',

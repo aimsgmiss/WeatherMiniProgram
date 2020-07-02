@@ -1,11 +1,11 @@
 /*search table*/
 /* background: RGB（245,245,245）;*/
+/* background: rgb(245,245,245);*/
 .search-table{
-  margin: 20rpx 0rpx 10rpx 0rpx;
+  margin: 10rpx 0rpx 10rpx 0rpx;
   height: auto;
   font-size: 32rpx;
   position: relative;
-  background: rgb(245,245,245);
   color: black;
 }
 
@@ -14,9 +14,13 @@
 }
 
 .search-table-body-row{
-  margin: 80rpx 10rpx 80rpx 0rpx;
+  margin: 40rpx 10rpx 40rpx 0rpx;
   border-radius: 25rpx;
   background: white;
+}
+
+.search-table-body-row:first-child{
+  margin:none;
 }
 
 .search-table-body-row-cell{

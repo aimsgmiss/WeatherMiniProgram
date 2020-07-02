@@ -1,5 +1,5 @@
 
-<view class="search-table">
+<view class="search-table container">
     <view class="search-table-body">
       <scroll-view  id="scroll-view" scroll-y="true" style="height:{{scrollViewHeight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
       <!-- 防雷检测资质单位-->
